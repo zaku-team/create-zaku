@@ -1,0 +1,42 @@
+# logs
+logs
+_.log
+npm-debug.log_
+
+# diagnostic reports
+report.[0-9]_.[0-9]_.[0-9]_.[0-9]_.json
+
+# runtime data
+pids
+_.pid
+_.seed
+*.pid.lock
+
+# tests
+lib-cov
+.nyc_output
+coverage
+*.lcov
+
+# dependency directories
+node_modules/
+jspm_packages/
+
+# cache
+.rpt2_cache/
+.rts2_cache_cjs/
+.rts2_cache_es/
+.rts2_cache_umd/
+.stylelintcache
+.eslintcache
+.npm
+*.tsbuildinfo
+
+# build
+build
+build/Release
+*.tgz
+
+# misc
+.DS_Store
+*.pem

@@ -1,0 +1,36 @@
+{
+	"name": "create-zaku",
+	"version": "0.1.0",
+	"description": "Scaffold a new zaku project",
+	"type": "module",
+	"private": false,
+	"author": "Mayank Verma",
+	"license": "MIT",
+	"bin": "./main.js",
+	"scripts": {
+		"prebuild": "rm -rf ./build package.tgz",
+		"build": "bun run ./scripts/build.ts",
+		"build:tarball": "bun run build && (cd ./build && npm pack --pack-destination ..) && mv create-zaku-*.tgz package.tgz",
+		"publish": "bun run build:tarball && npm publish package.tgz",
+		"lint": "eslint .",
+		"fmt": "prettier --write .",
+		"fmt:check": "prettier --check ."
+	},
+	"repository": {
+		"type": "git",
+		"url": "git+https://github.com/zaku-team/create-zaku.git"
+	},
+	"bugs": {
+		"url": "https://github.com/zaku-team/create-zaku/issues"
+	},
+	"devDependencies": {
+		"@typescript-eslint/eslint-plugin": "6.6.0",
+		"@typescript-eslint/parser": "6.6.0",
+		"bun-types": "1.0.1",
+		"eslint": "8.49.0",
+		"eslint-config-prettier": "9.0.0",
+		"eslint-plugin-prettier": "5.0.0",
+		"prettier": "3.0.3",
+		"typescript": "5.2.2"
+	}
+}
